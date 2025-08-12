@@ -1,0 +1,16 @@
+{
+    "name": "matheus/api-pratica",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Matheus\\ApiPratica\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matheus"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
