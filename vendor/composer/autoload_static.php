@@ -9,14 +9,27 @@ class ComposerStaticInitcb76e648e6548bb947689a9d14fa253e
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
-            'Matheus\\ApiPratica\\' => 19,
+            'Model\\' => 6,
+            'Matheus\\ApiSenai\\' => 17,
+        ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Matheus\\ApiPratica\\' => 
+        'Model\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/Model',
+        ),
+        'Matheus\\ApiSenai\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/API - PRATICA',
+        ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Controller',
         ),
     );
 

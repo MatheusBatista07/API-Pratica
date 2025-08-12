@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Matheus\\ApiPratica\\' => array($baseDir . '/src'),
+    'Model\\' => array($baseDir . '/Model'),
+    'Matheus\\ApiSenai\\' => array($baseDir . '/API - PRATICA'),
+    'Controller\\' => array($baseDir . '/Controller'),
 );
