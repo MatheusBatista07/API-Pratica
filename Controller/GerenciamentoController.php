@@ -7,8 +7,10 @@ use Model\Gerenciamento;
 class GerenciamentoController {
     public function getGerenciamentos()
     {
+        $id = isset($_GET['id']) ? intval($_GET['id']) : null;
+
         $gerenciamento = new Gerenciamento();
-        $gerenciamentos = $gerenciamento->getGerenciamento();
+        $gerenciamentos = $gerenciamento->getGerenciamento($id);
 
         if ($gerenciamentos) {
             // Envia a resposta JSON

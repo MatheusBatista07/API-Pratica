@@ -17,13 +17,21 @@
                 $this->conn = Connection::getConnection();
         }
 
-        public function getGerenciamento()
-        {
-            $sql= "SELECT * FROM gerenciamento";
+            public function getGerenciamento($id = null){
+
+        if($id){
+        $sql = 'SELECT * FROM gerenciamento WHERE id = :id';
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        
+        } else {
+            $sql =  'SELECT * FROM gerenciamento ';
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
         public function createGerenciamento()
         {
